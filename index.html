@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bitflix</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <img src="./img/icons/logo.svg" alt="" class="logo" />
+        <ul class="genres">
+          <li>
+            <button class="genre-item">Главная</button>
+          </li>
+          <li>
+            <button class="genre-item">Триллер</button>
+          </li>
+          <li>
+            <button class="genre-item">Комедия</button>
+          </li>
+          <li>
+            <button class="genre-item">...</button>
+          </li>
+          <li>
+            <button class="genre-item">Фантастика</button>
+          </li>
+          <li>
+            <button class="genre-item">Избранное</button>
+          </li>
+        </ul>
+      </aside>
+      <nav class="searchbar">
+        <form action="" id="search">
+          <div id="search-icon-and-input">
+            <img src="./img/icons/search.svg" />
+
+            <input
+              type="text"
+              placeholder="Поиск по каталогу..."
+              id="search-input"
+            />
+          </div>
+          <button id="search-button">Искать</button>
+        </form>
+        <button id="add-movie-button">Добавить фильм</button>
+      </nav>
+      <main id="movie-list">
+        <div class="movie-item">
+          <img
+            src="./img/covers/notimetodie.png"
+            alt="movie cover"
+            class="cover-art"
+          />
+          <div class="movie-description">
+            <div class="titles">
+              <h2 class="movie-title">Не время умирать (2021)</h2>
+              <p class="movie-original-title">No Time To Die</p>
+            </div>
+            <p class="movie-synopsis">
+              Джеймс Бонд оставил оперативную службу и наслаждается спокойной
+              жизнью на Ямайке. Все меняется, когда на острове появляется его
+              старый друг Феликс Лейтер из ЦРУ с просьбой о помощи.
+            </p>
+            <div class="length-line">
+              <div class="time">
+                <img src="./img/icons/time.svg" alt="toto description" />
+                <p class="movie-length">163 мин. / 02.43</p>
+              </div>
+              <p class="movie-genre">Боевик, триллер, приключения</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <img
+            src="./img/covers/dune.png"
+            alt="movie cover"
+            class="cover-art"
+          />
+          <div class="movie-description">
+            <div class="titles">
+              <h2 class="movie-title">Дюна (2021)</h2>
+              <p class="movie-original-title">Dune</p>
+            </div>
+            <p class="movie-synopsis">
+              Человечество расселилось по далёким планетам, а за власть над
+              обитаемым пространством постоянно борются разные могущественные
+              семьи. В центре противостояния оказывается пустынная...
+            </p>
+            <div class="length-line">
+              <div class="time">
+                <img src="./img/icons/time.svg" alt="toto description" />
+                <p class="movie-length">155 мин. / 02:35</p>
+              </div>
+              <p class="movie-genre">фантастика, боевик, драма</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item active">
+          <img
+            src="./img/covers/paper-house.png"
+            alt="movie cover"
+            class="cover-art"
+          />
+          <div class="movie-description">
+            <div class="titles">
+              <h2 class="movie-title">Бумажный дом</h2>
+              <p class="movie-original-title">La casa de parel</p>
+            </div>
+            <p class="movie-synopsis">
+              Восемь воров берут заложников и запираются в Королевском монетном
+              дворе Испании, пока криминальный авторитет манипулирует полицией,
+              чтобы реализовать свой план.
+            </p>
+            <div class="length-line">
+              <div class="time">
+                <img src="./img/icons/time.svg" alt="toto description" />
+                <p class="movie-length">50 мин. / эпизод</p>
+              </div>
+              <p class="movie-genre">боевик, триллер, драма</p>
+            </div>
+          </div>
+          <button class="details">Подробнее</button>
+        </div>
+
+        <div class="movie-item">
+          <img
+            src="./img/covers/wonder-woman.png"
+            alt="movie cover"
+            class="cover-art"
+          />
+          <div class="movie-description">
+            <div class="titles">
+              <h2 class="movie-title">Чудо-женщина: 1984 (2020)</h2>
+              <p class="movie-original-title">Wonder Woman 1984</p>
+            </div>
+            <p class="movie-synopsis">
+              1984 год. Диана всё ещё грустит по погибшему Стиву, борется с
+              мелким криминалом и работает в музее Смитсоновского института.
+              Однажды она знакомится с новой коллегой Барбарой, специалисткой
+              широкого...
+            </p>
+            <div class="length-line">
+              <div class="time">
+                <img src="./img/icons/time.svg" alt="toto description" />
+                <p class="movie-length">151 мин. / 02:31</p>
+              </div>
+              <p class="movie-genre">фэнтези, боевик, приключения</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <img
+            src="./img/covers/rick-and-morty.png"
+            alt="movie cover"
+            class="cover-art"
+          />
+          <div class="movie-description">
+            <div class="titles">
+              <h2 class="movie-title">Рик и Морти</h2>
+              <p class="movie-original-title">Rick and Morty</p>
+            </div>
+            <p class="movie-synopsis">
+              В центре сюжета - школьник по имени Морти и его дедушка Рик. Морти
+              - самый обычный мальчик, который ничем не отличается от своих
+              сверстников. А вот его дедуля занимается необычными научными...
+            </p>
+            <div class="length-line">
+              <div class="time">
+                <img src="./img/icons/time.svg" alt="toto description" />
+                <p class="movie-length">23 мин. / эпизод</p>
+              </div>
+              <p class="movie-genre">мультфильм, комедия, фантастика</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <img
+            src="./img/covers/raya-and-the-last-dragon.png"
+            alt="movie cover"
+            class="cover-art"
+          />
+          <div class="movie-description">
+            <div class="titles">
+              <h2 class="movie-title">Райя и последний дракон</h2>
+              <p class="movie-original-title">Raya and the Last Dragon</p>
+            </div>
+            <p class="movie-synopsis">
+              Давным-давно в волшебной стране Кумандре бок о бок с людьми жили
+              драконы — создатели и хранители воды. Мирной жизни пришел конец,
+              когда появились друуны. Порождения тьмы обращали людей и драконов
+              в ...
+            </p>
+
+            <div class="length-line">
+              <div class="time">
+                <img src="./img/icons/time.svg" alt="toto description" />
+                <p class="movie-length">107 мин. / 01:47</p>
+              </div>
+              <p class="movie-genre">мультфильм, фэнтези, боевик</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
