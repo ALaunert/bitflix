@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container">
-      <aside class="sidebar">
+      <nav class="sidebar">
         <img src="./img/icons/logo.svg" alt="" class="logo" />
         <ul class="genres">
           <li>
@@ -37,22 +37,24 @@
             <button class="genre-item">Избранное</button>
           </li>
         </ul>
-      </aside>
-      <nav class="searchbar">
-        <form action="" id="search">
-          <div id="search-icon-and-input">
-            <img src="./img/icons/search.svg" />
-
-            <input
-              type="text"
-              placeholder="Поиск по каталогу..."
-              id="search-input"
-            />
-          </div>
-          <button id="search-button">Искать</button>
-        </form>
-        <button id="add-movie-button">Добавить фильм</button>
       </nav>
+      <div class="bar">
+        <div class="searchbar">
+          <form action="" id="search">
+            <div id="search-icon-and-input">
+              <img src="./img/icons/search.svg" />
+
+              <input
+                type="text"
+                placeholder="Поиск по каталогу..."
+                id="search-input"
+              />
+            </div>
+            <button id="search-button">Искать</button>
+          </form>
+          <button id="add-movie-button">Добавить фильм</button>
+        </div>
+      </div>
       <main id="movie-list">
         <div class="movie-item">
           <img
