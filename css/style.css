@@ -8,13 +8,18 @@ button {
   color: #fff;
 }
 
+#movie-list,
+#main-section {
+  grid-area: 2/2;
+}
+
 .container {
   display: grid;
   grid-template-columns: 400px 1fr;
   grid-template-rows: 88px 1fr;
   height: 100vh;
-  width: 1665px;
   margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
 }
 
 .sidebar {
@@ -30,31 +35,56 @@ button {
   top: 0;
 }
 
-.logo {
+.logo-link {
+  text-align: center;
   margin: 60px auto;
+}
+.genres {
+  overflow: auto;
+  width: 340px;
+  margin: 0 auto;
+}
+.genres::-webkit-scrollbar {
+  display: none;
+}
+
+.genres {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .genre-item {
+  display: flex;
+  align-items: center;
   height: 70px;
-  width: 340px;
-
-  border: none;
-
+  width: 100%;
+  border-bottom: 2px solid rgba(242, 242, 242, 0.1);
+  transition: 0.2s;
   color: #b7b7b7;
-  background-color: inherit;
+}
+.genre-link {
+  display: block;
+  height: 100%;
+  width: 100%;
 
   font-size: 18px;
   font-weight: 600;
+  line-height: 70px;
+  text-indent: 12px;
+
   text-transform: uppercase;
-  text-align: start;
-
-  border-bottom: 2px solid rgba(242, 242, 242, 0.1);
-  padding-left: 12px;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-.genre-item:hover,
-.genre-item:active {
+.genre-item:hover {
+  color: #fff;
   background: rgba(255, 255, 255, 0.05);
+}
+.genre-item:last-child {
+  border-bottom: none;
 }
 
 /* NAVBAR (SEARCH) */
@@ -66,12 +96,11 @@ button {
 .searchbar {
   display: flex;
   align-items: center;
-
   position: fixed;
   padding-left: 20px;
   height: 88px;
-  width: 1245px;
-
+  width: calc(100vw - 400px);
+  gap: 135px;
   z-index: 2;
 
   background-color: #fff;
@@ -82,23 +111,23 @@ button {
   display: flex;
   align-items: center;
   gap: 15px;
-  flex-shrink: 0;
+  width: 90%;
 }
 
 #search-icon-and-input {
   display: flex;
   align-items: center;
   gap: 8px;
+  width: 100%;
 }
 
 #search-input {
   border: none;
   border-bottom: 1px solid rgba(196, 196, 196, 1);
 
-  width: 720px;
+  width: 100%;
 
   font-size: 18px;
-  font-weight: 400;
   line-height: 40px;
 }
 
@@ -108,7 +137,6 @@ button {
 
   height: 40px;
   width: 90px;
-  padding: 5px;
 
   border-radius: 10px;
   background-color: rgb(231, 160, 78);
@@ -123,136 +151,15 @@ button {
 #add-movie-button {
   font-size: 12px;
   font-weight: 700;
-
+  width: 158px;
   height: 40px;
-  padding: 10px;
   border-radius: 10px;
-  margin-left: auto;
   margin-right: 50px;
   background-color: rgba(18, 197, 132, 1);
-
+  flex-shrink: 0;
   text-transform: uppercase;
 }
 
 #add-movie-button:hover {
   background-color: #10b177;
-}
-
-/* MOVIE LIST */
-#movie-list {
-  display: flex;
-  margin: 40px;
-  flex-wrap: wrap;
-  gap: 30px;
-  grid-area: 2/2;
-}
-
-.movie-item {
-  border-radius: 20px;
-
-  width: 370px;
-  height: 700px;
-
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-
-  gap: 15px;
-  box-shadow: 0px 5px 20px -5px rgba(153, 153, 153, 0.66);
-  cursor: pointer;
-}
-
-.active {
-  position: relative;
-}
-
-.active::after {
-  position: absolute;
-  box-shadow: -700px -370px 0px 0px rgba(0, 0, 0, 0.7) inset;
-  content: "";
-  display: block;
-  height: 100%;
-  right: 0px;
-  top: 0px;
-  width: 100%;
-}
-
-.details {
-  font-size: 18px;
-  font-weight: 700;
-
-  width: 221px;
-  height: 56px;
-
-  z-index: 1;
-
-  border: none;
-  border-radius: 10px;
-
-  text-transform: uppercase;
-
-  position: absolute;
-  right: 75px;
-  top: 295px;
-
-  background-color: rgba(18, 197, 132, 1);
-}
-
-.movie-description {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-
-  margin: 0 20px;
-  margin-bottom: 24px;
-}
-.titles {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.movie-title {
-  color: #333;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.movie-original-title {
-  color: #999;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 600;
-}
-
-.movie-synopsis {
-  color: #333;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.length-line {
-  color: #ccc;
-  line-height: 22px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  margin-top: auto;
-}
-
-.time {
-  display: flex;
-  gap: 3px;
-}
-
-.movie-length {
-  font-size: 12px;
-}
-
-.movie-genre {
-  font-size: 10px;
-  text-transform: uppercase;
 }

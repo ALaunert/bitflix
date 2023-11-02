@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,25 +17,27 @@
   <body>
     <div class="container">
       <nav class="sidebar">
-        <img src="./img/icons/logo.svg" alt="" class="logo" />
+        <a href="index.html" class="logo-link">
+          <img src="./img/icons/logo.svg" alt="" class="logo" />
+        </a>
         <ul class="genres">
-          <li>
-            <button class="genre-item">Главная</button>
+          <li class="genre-item">
+            <a class="genre-link" href="index.html">Главная</a>
           </li>
-          <li>
-            <button class="genre-item">Триллер</button>
+          <li class="genre-item">
+            <a class="genre-link" href="#thrillers">Триллер</a>
           </li>
-          <li>
-            <button class="genre-item">Комедия</button>
+          <li class="genre-item">
+            <a class="genre-link" href="#comedies">Комедия</a>
           </li>
-          <li>
-            <button class="genre-item">...</button>
+          <li class="genre-item">
+            <a class="genre-link" href="#others">...</a>
           </li>
-          <li>
-            <button class="genre-item">Фантастика</button>
+          <li class="genre-item">
+            <a class="genre-link" href="#sci-fi">Фантастика</a>
           </li>
-          <li>
-            <button class="genre-item">Избранное</button>
+          <li class="genre-item">
+            <a class="genre-link" href="#favourite">Избранное</a>
           </li>
         </ul>
       </nav>
@@ -43,7 +46,6 @@
           <form action="" id="search">
             <div id="search-icon-and-input">
               <img src="./img/icons/search.svg" />
-
               <input
                 type="text"
                 placeholder="Поиск по каталогу..."
@@ -80,6 +82,9 @@
               <p class="movie-genre">Боевик, триллер, приключения</p>
             </div>
           </div>
+          <div class="movie-item-hover">
+            <a href="/details.html" class="details">подробнее</a>
+          </div>
         </div>
 
         <div class="movie-item">
@@ -106,9 +111,12 @@
               <p class="movie-genre">фантастика, боевик, драма</p>
             </div>
           </div>
+          <div class="movie-item-hover">
+            <a href="/details.html" class="details">подробнее</a>
+          </div>
         </div>
 
-        <div class="movie-item active">
+        <div class="movie-item">
           <img
             src="./img/covers/paper-house.png"
             alt="movie cover"
@@ -132,7 +140,9 @@
               <p class="movie-genre">боевик, триллер, драма</p>
             </div>
           </div>
-          <button class="details">Подробнее</button>
+          <div class="movie-item-hover">
+            <a href="/details.html" class="details">подробнее</a>
+          </div>
         </div>
 
         <div class="movie-item">
@@ -160,6 +170,9 @@
               <p class="movie-genre">фэнтези, боевик, приключения</p>
             </div>
           </div>
+          <div class="movie-item-hover">
+            <a href="/details.html" class="details">подробнее</a>
+          </div>
         </div>
 
         <div class="movie-item">
@@ -185,6 +198,9 @@
               </div>
               <p class="movie-genre">мультфильм, комедия, фантастика</p>
             </div>
+          </div>
+          <div class="movie-item-hover">
+            <a href="/details.html" class="details">подробнее</a>
           </div>
         </div>
 
@@ -214,8 +230,29 @@
               <p class="movie-genre">мультфильм, фэнтези, боевик</p>
             </div>
           </div>
+          <div class="movie-item-hover">
+            <a href="/details.html" class="details">подробнее</a>
+          </div>
         </div>
       </main>
     </div>
   </body>
+  <!-- <script type="text/javascript">
+    let cards = [...document.getElementsByClassName("movie-item")];
+    console.log(cards);
+    const button = document.createElement("a");
+    button.setAttribute("href", "details.html");
+    button.classList.add("details");
+    button.textContent = "Подробнее";
+    cards.forEach((element) => {
+      element.addEventListener("mouseenter", function (e) {
+        element.classList.toggle("active");
+        element.appendChild(button);
+      });
+      element.addEventListener("mouseleave", function (e) {
+        element.classList.toggle("active");
+        element.removeChild(button);
+      });
+    });
+  </script> -->
 </html>
